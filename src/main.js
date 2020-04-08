@@ -13,7 +13,7 @@ Vue.mixin({
     console.log('Global Mixin - created hook');
     // 查看 log 會發現... Global Mixin會自動加載於各個 Vue instance中！！！
     // Neo案： 感覺好像病毒 XD 但有任何要 global 使用的企業邏輯，都可以宣告在 Global Mixin中自動加載！甚好啊！
-    // 但由UI操作可以發現，每個 Vue 中 Mixin 的資料是獨立存在的，並不共用！！
+    // 但由UI操作可以發現，每個 Vue 中 Mixin 的資料是獨立存在的，並不共用！！
     // 若想要共用的，可以使用 eventBus!
   }
 });
