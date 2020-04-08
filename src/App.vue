@@ -23,13 +23,15 @@
 
 <script>
     import ListVue from "./List.vue";
+    import { fruitMixin } from "./fruitMixin.js";
 
     export default {
+        mixins: [fruitMixin],
         data: function() {
             return {
-                someText: 'Hello there!',
-                fruits: ['Apple', 'Mongo', 'Banana'],
-                filterText: ''
+                someText: 'Hello there!'
+                //fruits: ['Apple', 'Mongo', 'Banana'], // 改用 fruitMixin.js中宣告的
+                //filterText: ''
             }
         }, 
         filters: {
@@ -38,13 +40,14 @@
                 return value.toUpperCase();
             }
         },
+        /* 改用 fruitMixin.js中宣告的
         computed: {
             filterFruits: function() { // 也可以寫成 filterFruits() {}
                 return this.fruits.filter( (element) => { // 注意！不可以寫成 function(element) {}
                     return element.match(this.filterText);
                 });
             }
-        }, 
+        },*/ 
         components: {
             appList: ListVue // 也可以寫成 'app-list': ListVue
         }

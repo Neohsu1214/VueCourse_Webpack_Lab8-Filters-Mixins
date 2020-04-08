@@ -12,7 +12,11 @@
 </template>
 
 <script>
+    import { fruitMixin } from "./fruitMixin.js";
+
     export default {
+        mixins: [fruitMixin]
+        /* 改用 fruitMixin.js 中宣告的內容了
         data: function() {
             return {
                 fruits: ['Apple', 'Mongo', 'Banana'],
@@ -28,6 +32,7 @@
                 });
             }
         }
+        */
     }
 </script>
 
