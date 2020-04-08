@@ -50,6 +50,9 @@
         },*/ 
         components: {
             appList: ListVue // 也可以寫成 'app-list': ListVue
+        },
+        created: function() {
+            console.log('App Vue Created');
         }
     }
 </script>

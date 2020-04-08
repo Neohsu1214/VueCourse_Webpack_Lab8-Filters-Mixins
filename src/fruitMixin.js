@@ -1,3 +1,5 @@
+// 一個 mixin 一樣是一個 Vue instance，只是他是個 Vue 宣告的 Macro，並不能獨立使用！
+
 export const fruitMixin = {
     data: function() {
         return {
@@ -13,5 +15,8 @@ export const fruitMixin = {
                 return element.match(this.filterText);
             });
         }
+    },
+    created: function() {
+        console.log('Mixin Created');
     }
 }

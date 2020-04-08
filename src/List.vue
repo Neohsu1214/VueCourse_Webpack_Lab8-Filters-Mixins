@@ -15,7 +15,7 @@
     import { fruitMixin } from "./fruitMixin.js";
 
     export default {
-        mixins: [fruitMixin]
+        mixins: [fruitMixin]  // 所以 Mixin 就是 Macro 啦！就是為了避免到處充滿重複的 code而建立的！ Vue會自動把 mixin 中建立的 data, computed, methods 等跟原本 Vue物件中的整合在一起
         /* 改用 fruitMixin.js 中宣告的內容了
         data: function() {
             return {
