@@ -13,12 +13,17 @@
                 <ul>
                     <li v-for="(fruit, index) in filterFruits" :key="index">{{ fruit }}</li>
                 </ul>
+
+                <hr>
+                <app-list></app-list>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import ListVue from "./List.vue";
+
     export default {
         data: function() {
             return {
@@ -39,6 +44,9 @@
                     return element.match(this.filterText);
                 });
             }
+        }, 
+        components: {
+            appList: ListVue // 也可以寫成 'app-list': ListVue
         }
     }
 </script>
